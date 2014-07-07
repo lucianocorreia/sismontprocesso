@@ -1,0 +1,274 @@
+﻿
+@{
+    ViewBag.Title = "Colaborador";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <div ng-app="app">
+    <div ng-controller="funcionarioController">
+        <div class="container-fluid">
+            <form class="col-lg-12" ng-submit="add()" name="form">
+                @{
+                    Html.RenderPartial("~/Views/Requisicao/RequisicaoTemplate.cshtml");
+                }
+
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    <div class='row'>
+
+                        <div class='form-group col-md-8'>
+                            <label for="nome" class="control-label">Nome</label>
+                            <input type="text" ng-model="funcionario.nome" class="form-control" id="nome" required />
+                        </div>
+
+                        <div class='form-group col-md-2'>
+                            <label for="nascimento">Nascimento</label>
+                            <input type="text" ng-model="funcionario.nascimento" class="form-control" id="nascimento" required />
+                        </div>
+
+                        <div class='form-group col-md-2'>
+                            <label for="sexo">Sexo</label>
+                            <select id="sexo" ng-model="funcionario.sexo" class="form-control">
+                                <option value="M">Masculino</option>
+                                <option value="F">Feminino</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class='row'>
+
+                        <div class='col-md-2'>
+                            <div class='form-group'>
+                                <label for="cep">CEP</label>
+                                <div class="input-group">
+                                    <input type="text" ng-model="funcionario.cep" class="form-control" id="cep" />
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class='col-md-9'>
+                            <div class='form-group'>
+                                <label for="endereco">Endereço</label>
+                                <input type="text" ng-model="funcionario.endereco" class="form-control" id="endereco" />
+                            </div>
+                        </div>
+
+                        <div class='col-md-1'>
+                            <label for="numero">Número</label>
+                            <input type="text" ng-model="funcionario.numero" class="form-control" id="numero" />
+                        </div>
+                    </div>
+
+
+                    <div class='row'>
+                        <div class='col-md-4'>
+                            <div class='form-group'>
+                                <label for="complemento">Complmento</label>
+                                <input type="text" ng-model="funcionario.complemento" class="form-control" id="complemento" />
+                            </div>
+                        </div>
+
+                        <div class='col-md-4'>
+                            <div class='form-group'>
+                                <label for="bairro">Bairro</label>
+                                <input type="text" ng-model="funcionario.bairro" class="form-control" id="bairro" />
+                            </div>
+                        </div>
+
+                        <div class='col-md-4'>
+                            <div class='form-group'>
+                                <label for="municipio">Município</label>
+                                <input type="text" ng-model="funcionario.municipio" class="form-control" id="municipio" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='row'>
+                        <div class='col-md-3'>
+                            <div class='form-group'>
+                                <label for="telefone">Telefone</label>
+                                <input type="text" ng-model="funcionario.telefone" class="form-control" id="telefone" />
+                            </div>
+                        </div>
+
+                        <div class='col-md-3'>
+                            <div class='form-group'>
+                                <label for="celular">Celular</label>
+                                <input type="text" ng-model="funcionario.celular" class="form-control" id="celular" />
+                            </div>
+                        </div>
+
+                        <div class='col-md-6'>
+                            <div class='form-group'>
+                                <label for="email">Email</label>
+                                <input type="text" ng-model="funcionario.email" class="form-control" id="email" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='row'>
+                        <div class='col-md-6'>
+                            <div class='form-group'>
+                                <label for="pai">Nome do Pai</label>
+                                <input type="text" ng-model="funcionario.pai" class="form-control" id="pai" />
+                            </div>
+                        </div>
+
+                        <div class='col-md-6'>
+                            <div class='form-group'>
+                                <label for="mae">Nome da Mãe</label>
+                                <input type="text" ng-model="funcionario.mae" class="form-control" id="mae" />
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class='row'>
+                        <div class='col-md-4'>
+                            <div class='form-group'>
+                                <label for="estado_civil">Estado Cívil</label>
+                                <select id="estado_civil" ng-model="funcionario.estado_civil" class="form-control">
+                                    <option value="0">Solteiro</option>
+                                    <option value="1">Casado</option>
+                                    <option value="2">Separado</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class='col-md-8' ng-view="funcionario.estado_civil==1">
+                            <div class='form-group'>
+                                <label for="conjuge">Nome do Cônjuge</label>
+                                <input type="text" ng-model="funcionario.conjuge" class="form-control" id="conjuge" />
+                            </div>
+                        </div>
+                    </div>
+
+
+                </fieldset>
+
+
+
+                <fieldset>
+                    <legend>Documentação</legend>
+                    <div class='row'>
+                        <div class='col-sm-4'>
+                            <div class='form-group'>
+                                <label for="cpf">CPF</label>
+                                <input type="text" ng-model="funcionario.cpf" class="form-control" id="cpf" />
+                            </div>
+                        </div>
+                        <div class='col-sm-4'>
+                            <div class='form-group'>
+                                <label for="rg">RG</label>
+                                <input type="text" ng-model="funcionario.rg" class="form-control" id="rg" />
+                            </div>
+                        </div>
+                        <div class='col-sm-4'>
+                            <div class='form-group'>
+                                <label for="data_emissao_rg">Emissão</label>
+                                <input type="text" ng-model="funcionario.data_emissao_rg" class="form-control" id="data_emissao_rg" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='row'>
+                        <div class='col-sm-4'>
+                            <div class='form-group'>
+                                <label for="pis">PIS\PASEP</label>
+                                <input type="text" ng-model="funcionario.pis" class="form-control" id="pis" />
+                            </div>
+                        </div>
+                        <div class='col-sm-4'>
+                            <div class='form-group'>
+                                <label for="numero_ctps">Número da CTPS</label>
+                                <input type="text" ng-model="funcionario.ctps" class="form-control" id="numero_ctps" />
+                            </div>
+                        </div>
+                        <div class='col-sm-4'>
+                            <div class='form-group'>
+                                <label for="serie_ctps">Série</label>
+                                <input type="text" ng-model="funcionario.serie" class="form-control" id="serie_ctps" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='row'>
+                        <div class='col-sm-4'>
+                            <div class='form-group'>
+                                <label for="titulo">Título de Eleitor</label>
+                                <input type="text" ng-model="funcionario.titulo_eleitor" class="form-control" id="titulo" />
+                            </div>
+                        </div>
+                        <div class='col-sm-1'>
+                            <div class='form-group'>
+                                <label for="zona">Zona</label>
+                                <input type="text" ng-model="funcionario.zona" class="form-control" id="zona" />
+                            </div>
+                        </div>
+                        <div class='col-sm-1'>
+                            <div class='form-group'>
+                                <label for="secao">Seção</label>
+                                <input type="text" ng-model="funcionario.secao" class="form-control" id="secao" />
+                            </div>
+                        </div>
+                        <div class='col-sm-4'>
+                            <div class='form-group'>
+                                <label for="cnh">CNH</label>
+                                <input type="text" ng-model="funcionario.cnh" class="form-control" id="cnh" />
+                            </div>
+                        </div>
+                        <div class='col-sm-2'>
+                            <div class='form-group'>
+                                <label for="categoria_cnh">Categoria</label>
+                                <input type="text" ng-model="funcionario.categoria_cnh" class="form-control" id="categoria_cnh" />
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Admissão</legend>
+                    <div class='row'>
+                        <div class='col-sm-2'>
+                            <div class='form-group'>
+                                <label for="admissao">Admissão</label>
+                                <input type="text" ng-model="funcionario.admissao" class="form-control" />
+                            </div>
+                        </div>
+                        <div class='col-sm-2'>
+                            <div class='form-group'>
+                                <label for="salario">Salário</label>
+                                <input type="text" ng-model="funcionario.salario" class="form-control" id="salario" />
+                            </div>
+                        </div>
+                        <div class='col-sm-8'>
+                            <div class='form-group'>
+                                <label for="cargo">Cargo/Função</label>
+                                <input type="text" ng-model="funcionario.cargo" class="form-control" id="cargo" />
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="row">
+                    <fieldset>
+                        <legend>Dependentes</legend>
+                        <button type="button" class="btn btn btn-primary glyphicon glyphicon-plus" ng-click="open()"></button>
+                        <div class="gridStyle col-lg-12" ng-grid="gridDependentes"></div>
+                        <div class="row">
+                            <input type="submit" class="btn btn-primary" value="Cadastrar" />
+                            <input type="reset" class="btn btn-warning" value="Limpar" />
+                        </div>
+                    </fieldset>
+                </div>
+                @{
+                    Html.RenderPartial("~/Views/Requisicao/DependenteTemplate.cshtml");
+                }
+            </form>
+        </div>
+    </div>
+</div>
+
+    @Scripts.Render("~/scripts/app/controller/funcionario.controller.js")
+    @Scripts.Render("~/scripts/app/factory/requisicao.factory.js")
+    @Scripts.Render("~/scripts/app/factory/assunto.factory.js")

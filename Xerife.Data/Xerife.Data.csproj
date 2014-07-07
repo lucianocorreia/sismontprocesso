@@ -1,0 +1,708 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FDC65406-73F4-44C4-8921-962080F06713}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Xerife.Data</RootNamespace>
+    <AssemblyName>Xerife.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\..\AppTestes\packages\Microsoft.AspNet.Providers.Core.2.0.0\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Partials\DataContext.cs" />
+    <Compile Include="Partials\IRequisicao.cs" />
+    <Compile Include="Partials\xerife_documento.cs" />
+    <Compile Include="Partials\xerife_movimentacao_requisicao.cs" />
+    <Compile Include="Partials\xerife_requisicao.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Xerife.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Xerife.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Xerife.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Xerife.Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Xerife.Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_acumulador_fiscal.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_acumulador_guia.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_acumulador_servico.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_alocacao_tomador.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_anexo_mensagem.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_anotacao_funcionario.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_anotacao_parceiro.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_apuracao_imposto.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_arquivo.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_arquivo_bancario.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_assunto_requisicao.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_atestado.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_auditoria.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_banco.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_bloqueio_mensal.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_calendario.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_calendario_item.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_campo_usuario.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_cargo.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_categoria.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_categoria_financeira.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_centro_custo.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_ciap.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_ciap_item.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_classe_fiscal.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_cnae.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_codigo_fiscal.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_conducao.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_conducao_funcionario.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_conducao_item.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_configuracao.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_configuracao_folha.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_contador.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_conta_bancaria.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_conta_financeira.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_contra_partida.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_cookie.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_deducoes.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_departamento.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_dependente_funcionario.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_detalhamento_fiscal.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_documento.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_documento_portal.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_ecf.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_empresa.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_empresa_comercial.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_empresa_contabil.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_empresa_fiscal.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_empresa_folha.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_estoque.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_estorno.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_estorno_item.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_evento.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_evento_automatizado.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_evento_departamento.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_evento_filial.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_evento_funcionario.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_evento_parametro.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_evento_programado.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_evento_programado_item.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_evento_sindicato.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_evento_tomador.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_evento_usuario.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_exame_medico.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_exposicao_fator_risco.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_extrato.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_falta.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_favorito.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_ferias.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_filial.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_folha.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_folha_plano_saude_dependente.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_folha_plano_saude_funcionario.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_forma_pagamento.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_formula.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_fpas.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_funcionario.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_funcionario_dados.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_funcionario_inativo.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_funcionario_situacao.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_gerador_id.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_gps.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_grau_instrucao.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_historico_contabil.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_horario.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_horario_item.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_imposto.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_incidencia.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_incidencia_opcoes.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_indice.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_indice_item.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_infaz.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_integracao.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_integracao_fiscal.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_integracao_generica.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_item_cofins.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_item_ecf.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_item_fiscal.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_item_icms.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_item_ii.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_item_ipi.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_item_issqn.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_item_lancamento_servico.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_item_parcela.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_item_pis.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_item_produto.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_item_regime_tributario.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_item_transporte.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_lancamento_contabil.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_lancamento_fiscal.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_lancamento_importado.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_lancamento_servico.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_livro_fiscal.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_livro_fiscal_item.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_lote_contabil.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_mapa_tributario.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_mapeamento_tabela.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_mensagem.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_modelo_nota_fiscal.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_moeda.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_movimentacao_requisicao.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_movimentacao_sefip.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_municipio.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_nacionalidade.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_natureza_juridica.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_nota_ct.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_ocorrencia.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_outras_receitas.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_outras_receitas_item.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_parceiro.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_parceiro_desconto.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_parcela_servico.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_pasta_mensagem.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_patrimonio.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_permissao.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_permissao_filial.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_permissao_regra.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_piso_salarial.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_plano_centro_custo.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_plano_conta.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_plano_filial.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_plano_saude.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_plano_saude_dependente.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_plano_saude_filial.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_plano_saude_funcionario.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_ppp.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_produto.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_profissiografia.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_protocolo.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_rateio_financeiro.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_recolhimento_sefip.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_refeicao_funcionario.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_regime_tributario.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_regra.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_regra_acesso.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_regra_acesso_item.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_requisicao.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_rescisao.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_responsavel_registro_ppp.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_retencao.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_saldo_anterior_produto.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_saldo_centro_custo.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_saldo_patrimonio.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_saldo_produto.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_schema.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_sindicato.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_sindicato_parametro.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_sip.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_situacao_fiscal.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_situacao_folha.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_sped_c420.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_sped_c460.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_sped_c470.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_sped_c490.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_tabela.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_tabela_campo.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_tabela_item.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_tabela_servico.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_tipo_contrato.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_tipo_documento.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_tipo_evento.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_tipo_extrato.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_tipo_parceiro.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_titulo.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_titulo_tag.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_tomador.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_tomador_mensal.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_total_contabil.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_total_contabil_usuario.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_uf.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_unidade.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_usuario.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_usuario_regra.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_vale_refeicao.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_vale_valor.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_variavel.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_variavel_valor.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xerife_vinculo.cs">
+      <DependentUpon>Xerife.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Xerife.Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Xerife.Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
+    <None Include="Xerife.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Xerife.Model.edmx</DependentUpon>
+      <LastGenOutput>Xerife.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Xerife.Model.edmx.diagram">
+      <DependentUpon>Xerife.Model.edmx</DependentUpon>
+    </None>
+    <None Include="Xerife.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Xerife.Model.edmx</DependentUpon>
+      <LastGenOutput>Xerife.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

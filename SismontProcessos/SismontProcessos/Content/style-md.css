@@ -1,0 +1,12 @@
+@charset "utf-8";
+@media (min-width: 992px) {
+	/*---------- HEADER ----------*/
+		.header-company {
+			border-left: 1px solid #DDD;
+			margin: 4px 0 0 10px; padding: 5px 0 5px 15px;
+		}
+		.header .nav {
+			margin: 12px 0;
+		}
+	/*---------- HEADER ----------*/
+}

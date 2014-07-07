@@ -1,0 +1,106 @@
+@charset "utf-8";
+/*---------- GLOBAL CLASSES ----------*/
+	/* html */
+		body { background:#FFF; margin:0; padding:0; }
+		table td, div { font-size: 13px; }
+		h1, h2, h3, h4, h5, h6 { font-family: 'Arial', sans-serif; }
+/*---------- GLOBAL CLASSES ----------*/
+
+
+
+/*---------- HEADER ----------*/
+	/*header*/
+		.header {
+			float: left;			
+			width: 100%;
+			background: #F8F8F8;
+			border-bottom: 2px solid #016DB1;
+			padding: 10px 15px;
+		}
+			.header .navbar-toggle {
+				position: absolute;
+				z-index: 999;
+			}
+			.header .navbar-toggle i {
+				font-size: 1.5em; color: #006CB1;
+			}
+		.header-logo {
+			float: left;
+			width: 100%;
+			text-align: center;
+		}
+		.header-company {
+			float: left;
+			width: 100%;
+			font-size: 11px; color: #666; text-align: center;
+			margin: 10px 0;
+		}
+		.header .nav {
+			text-align: center;
+		}
+		.header .nav .label {
+			font-size: 0.750em;
+		}
+		.header .nav > li {
+			display: inline-block;
+			text-align: left;
+		}
+		.header .nav > li > a > i {
+			color: #006CB1;
+		}
+			.header .nav > li > a:hover > i,
+			.header .nav > .open > a > i	{
+				color: #3B9FF3;
+			}
+		.header .nav li > a {
+			border-radius: 1px;
+		}
+/*---------- HEADER ----------*/
+
+
+
+/*---------- BODY ----------*/
+	.page-wrapper {
+		float: left;
+		width: 100%;
+	}
+	.page-nav {
+		width: 100%;
+		background: #F8F8F8;
+	}
+		.page-nav .search-result {
+			display: none;
+		}
+		.page-nav .sidebar-search {
+			padding: 15px;
+		}
+		.page-nav .arrow {
+			float: right;
+			margin-top: 3px;
+		}
+		.page-nav .fa.arrow:before {
+			content: "\f104";
+		}
+		.page-nav .active > a > .fa.arrow:before {
+			content: "\f107";
+		}
+		.page-nav .nav-second-level li,
+		.page-nav .nav-third-level li {
+			border-bottom: none !important;
+		}
+		.page-nav .nav-second-level li .bookmark {
+			background: none; border: 0;
+		}
+			.page-nav .nav-second-level li .bookmark i {
+				color: #D9CE00;
+			}
+		.page-nav .nav-second-level li a {
+			padding-left: 37px;
+		}
+		.page-nav .nav-third-level li a {
+			padding-left: 52px;
+		}	 
+	.page-content {
+		padding: 30px;
+	}
+/*---------- BODY ----------*/

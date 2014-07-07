@@ -1,0 +1,33 @@
+﻿<script type="text/ng-template" id="docModal.html">
+    <div class="modal-header">
+        <h3 class="modal-title">Arquivos anexos</h3>
+    </div>
+    <div class="modal-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Tipo</th>
+                    <th>Data</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="doc in documentos">
+                    <td>{{doc.nome_arquivo}}</td>
+                    <td>tipo</td>
+                    <td>{{doc.data_documento}}</td>
+                    <td><a href="#">Clique aqui</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" ng-click="ok()">OK</button>
+    </div>
+</script>
+
+<script type="text/ng-template" id="buttonAnexo.html">
+    <div class="ngCellText" ng-cell-input>
+        <a href="#" data-toggle="dropdown" class="dropdown-toggle" ng-click="open()" ng-show="row.getProperty('isanexo')"><span class=" label label-info">{{row.getProperty('qtd')}}</span>  <i class="fa fa-paperclip"></i></a>
+    </div>
+</script>
