@@ -15,3 +15,9 @@ D:\Códigos Fontes\Sistema de Processos\Xerife.Data\obj\Debug\Xerife.Data.pdb
 D:\Códigos Fontes\Sistema de Processos\Xerife.Data\bin\Debug\System.Web.Providers.dll
 D:\Códigos Fontes\Sistema de Processos\Xerife.Data\bin\Debug\System.Web.Providers.xml
 D:\Códigos Fontes\Sistema de Processos\Xerife.Data\obj\Debug\Xerife.Data.csprojResolveAssemblyReference.cache
+C:\Sismont\sismontprocesso\Xerife.Data\bin\Debug\Xerife.Data.dll.config
+C:\Sismont\sismontprocesso\Xerife.Data\bin\Debug\Xerife.Data.dll
+C:\Sismont\sismontprocesso\Xerife.Data\bin\Debug\Xerife.Data.pdb
+C:\Sismont\sismontprocesso\Xerife.Data\obj\Debug\Xerife.Data.csprojResolveAssemblyReference.cache
+C:\Sismont\sismontprocesso\Xerife.Data\obj\Debug\Xerife.Data.dll
+C:\Sismont\sismontprocesso\Xerife.Data\obj\Debug\Xerife.Data.pdb
